@@ -1,0 +1,24 @@
+.link-title (@color: #34495e, @fontWeight: 500) {
+	font-weight: @fontWeight;
+	color: @color;
+	&:hover {
+		cursor: pointer;
+		color: @link-color;
+		text-decoration: none;
+	}
+}
+.btn-recommend {
+	.button-variant(#fff; @gray; darken(@gray, 10%)) !important;
+}
+.btn-follow {
+	.button-variant(#fff; #e67e22; darken(#e67e22, 10%)) !important;
+}
+.fsd-link(@color: rgb(63, 169, 245), @fontSize: 13, @fontWeight: 500) {
+	font-size: @fontSize;
+	color: @color;
+	&:hover {
+		cursor: pointer;
+		color: @link-color;
+		text-decoration: none;
+	}
+}

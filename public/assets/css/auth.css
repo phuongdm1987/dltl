@@ -1,0 +1,157 @@
+/*    --------------------------------------------------
+	:: Login header
+-------------------------------------------------- */
+body{
+	background: url('/assets/img/auth-bg.jpg');
+	font-family: Roboto, sans-serif;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.text-normal{
+	font-weight: normal;
+	margin-top: 8px;
+}
+#waa-header-bar{
+	background-color: rgba(51, 51, 51, 0.8);
+}
+.waa-logo{
+	padding: 10px 0px;
+}
+/*    --------------------------------------------------
+	:: Login Section
+-------------------------------------------------- */
+#login{
+	padding: 5%;
+}
+#login .form-wrap {
+	background-color: rgba(245, 245, 245, 0.9);
+	margin: 0 auto;
+	padding: 10px 20px 20px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+#login h1 {
+	color: #f54d56;
+	font-size: 18px;
+	margin: 10px 0 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#login .form-group {
+	display: block;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+#login .checkbox {
+	margin-bottom: 20px;
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+#login .checkbox.show:before {
+	content: '\e013';
+	color: #F54D56;
+	font-size: 17px;
+	margin: 1px 0 0 3px;
+	position: absolute;
+	pointer-events: none;
+}
+#login .checkbox .character-checkbox {
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	vertical-align: middle;
+	display: inline-block;
+}
+#login .checkbox input[type="checkbox"]{
+	margin-left: -15px;
+}
+#login .checkbox .label {
+	color: #6d6d6d;
+	font-size: 13px;
+	font-weight: normal;
+}
+#login .btn.btn-custom {
+	font-size: 14px;
+}
+#login .forget {
+	display: block;
+	font-size: 12px;
+	line-height: 35px;
+	text-align: center;
+}
+#login-form{
+	margin: auto;
+}
+/*    --------------------------------------------------
+	:: Inputs & Buttons
+	-------------------------------------------------- */
+.form-control {
+	color: #333;
+}
+.btn-custom {
+	color: #fff;
+	background-color: #F54D56;
+}
+.btn-custom:hover,
+.btn-custom:focus {
+	color: #fff;
+}
+
+/*    --------------------------------------------------
+	 :: Footer
+	-------------------------------------------------- */
+#footer {
+	color: #fff;
+	font-size: 13px;
+	text-align: center;
+}
+#footer p {
+	margin-bottom: 0;
+}
+#footer a {
+	color: inherit;
+}
+footer{
+	padding: 20px 0 15px;
+	position: relative;
+	width: 100%;
+	background-color: rgba(51, 51, 51, 0.8);
+}
+/*WIDTH BUTTON*/
+#btn-login{
+	width: 50%;
+}
+#btn-forgot{
+	width: 20%;
+}
+#btn-reset{
+	display: block;
+	margin: 0 10px;
+	width: 30%
+}
+/*Domain*/
+.text-domain{
+	color: #666;
+	display: block;
+	font-size: 13px;
+	margin-top: 10px;
+}
+#login-container {
+	background: #fff;
+	padding: 40px;
+	border-left: 1px solid #545454;
+	border-right: 1px solid #545454;
+	border-bottom: 1px solid #545454;
+}
+.register-container {
+	background: #fff;
+	padding: 20px;
+	border-left: 1px solid #545454;
+	border-right: 1px solid #545454;
+	border-bottom: 1px solid #545454;
+}

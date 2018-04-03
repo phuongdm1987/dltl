@@ -1,0 +1,146 @@
+.page-account {
+	margin-top: 50px;
+}
+.fsd-box {
+	border-radius: 2px;
+	margin-bottom: 10px;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(218, 226, 234);
+	.fsd-box-manager {
+		border-bottom: 1px solid rgb(218, 226, 234);
+		padding-bottom: 5px;
+		margin-bottom: 0;
+	}
+}
+.main-item  {
+	display: block;
+	.main-head {
+		padding: 5px;
+		border-bottom: 1px solid rgb(238, 238, 238);
+		position: relative;
+		overflow: hidden;
+		h3 {
+			padding: 10px 0px;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 20px;
+		}
+	}
+
+	.main-body {
+		padding: 10px;
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		height: auto;
+		.table {
+			width: 100%;
+			border: 1px solid rgb(196, 216, 223);
+			border-top: 2px solid rgb(153, 195, 211);
+			.table-sub {
+				border-top: none;
+				margin: 0;
+			}
+		}
+		.pagination {
+			margin: 0px;
+			float: right;
+		}
+		.link-title {
+			font-size: 13px;
+			font-weight: 500;
+			color: #333;
+		}
+		#list-photo {
+			width: 100%;
+			display: block;
+			overflow: hidden;
+			.photo-item {
+				position: relative;
+				display: inline-block;
+				min-height: 140px;
+				width: 157px;
+				padding-top: 15px;
+				.js_delete {
+					position: absolute;
+					top: 0px;
+					right: 5px;
+					border-radius: 50%;
+					background-color: rgb(51, 51, 51);
+					color: rgb(255, 255, 255);
+				}
+				.tour-photo {
+					background-size: cover;
+					width: 140px;
+					min-height: 140px;
+					display: inline-block;
+					float: left;
+					margin-right: 15px;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+		.move_pointer {
+			font-style: italic;
+    		margin: 0 0 10px;
+    		font-size: 14px;
+		}
+	}
+}
+.left-box {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	.fsd-nav-menu {
+		li {
+			display: block;
+			a {
+				color: #444;
+				font-size: 14px;
+				&:hover {
+					color: #444;
+				}
+			}
+			&:hover a {
+				color: #444;
+			}
+		}
+		.active {
+			background-color: rgb(0, 174, 239);
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+
+/**
+* Tags Input
+**/
+.main-body {
+	.tagsinput {
+		background-color: #fff;
+		border: 1px solid #cdcdcd;
+		span.tag {
+			margin-top: 4px;
+			margin-left: 2px;
+			a {
+				margin-top: 0;
+			}
+		}
+		#tags_tag {
+			margin-top: 0px;
+		}
+	}
+	#places_addTag {
+		#places_tag {
+			width: 150px;
+			margin-top: 0px;
+		}
+	}
+	.note {
+		font-style: italic;
+		font-size: 13px;
+		margin-top: 5px;
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"name": "laravel/laravel",
+	"description": "The Laravel Framework.",
+	"keywords": ["framework", "laravel"],
+	"require": {
+		"laravel/framework": "4.2.*",
+		"mews/purifier": "1.0.2",
+		"pda/pheanstalk": "dev-master",
+		"zizaco/entrust": "1.2.*@dev",
+		"mccool/laravel-auto-presenter": "~2.2",
+		"doctrine/dbal": "2.6.*@dev"
+	},
+	"require-dev": {
+		"barryvdh/laravel-debugbar": "~1.8",
+		"barryvdh/laravel-ide-helper": "~1.11@dev",
+		"mockery/mockery": "dev-master@dev"
+	},
+	"autoload": {
+		"files" : [
+			"app/config/constant.php",
+			"app/functions/functions.php"
+		],
+
+		"classmap": [
+			"app/libs",
+			"app/commands",
+			"app/controllers",
+			"app/database/migrations",
+			"app/database/seeds",
+			"app/tests/TestCase.php"
+		],
+
+		"psr-4" : {
+			"Fsd\\" : "app/Fsd"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php artisan optimize"
+		],
+		"pre-update-cmd": [
+			"php artisan clear-compiled"
+		],
+		"post-update-cmd": [
+			"php artisan optimize"
+		],
+		"post-create-project-cmd": [
+			"php artisan key:generate"
+		]
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev"
+}

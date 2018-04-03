@@ -1,0 +1,60 @@
+body {
+   font-size: 12px;
+}
+td {
+   /*padding: 5px 5px 0 !important;*/
+}
+.form-control {
+   padding: 5px;
+   height: 30px;
+   font-size: 12px;
+}
+#notification {
+   margin: 10px 0;
+}
+.page-header h3 {
+   margin-top: 0;
+   font-size: 17px;
+   font-weight: 300;
+   line-height: 25px;
+   color: #d31a1a;
+   text-transform: uppercase;
+}
+.page-header h3 span {
+   font-size: 14px;
+   color: #666;
+}
+.page-header h3 a {
+   text-transform: none;
+}
+.page-header {
+   margin-top: 20px;
+   padding: 0;
+   border-bottom: none;
+}
+.btn-action {
+   font-size: 16px;
+   position: relative;
+   top: -2px;
+}
+.btn-edit-action {
+   color: #666;
+}
+.btn-edit-action:hover {
+   color: #666;
+}
+.btn-active-action i.fa-square-o {
+   color: #999;
+}
+.grid-form-search {
+   background: #F1F1F1;
+   padding: 10px;
+   border: 1px solid #ccc;
+   margin-bottom: 15px;
+}
+.grid-form-search .btn[type="submit"] {
+   padding: 4px 10px;
+}
+.btn-fsd {
+   margin-left: 10px;
+}
