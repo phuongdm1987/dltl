@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-sm-3 social">
                 <div class="content">
-                    <p>Công ty CP truyền thông và du lịch quốc tế Thăng Long</p>
-                    <p>Địa chỉ: 525 Lạc Long Quân - Tây Hồ - Hà Nội</p>
+                    <p>{{ $setting->getOwner() }}</p>
+                    <p>Địa chỉ: {{ $setting->getAddress() }}</p>
                     <p>Mã Số Thuế : 0107031441</p>
                 </div>
                 <div class="icon">
