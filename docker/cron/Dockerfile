@@ -6,7 +6,7 @@ USER root
 RUN apt-get --allow-releaseinfo-change update \
  && apt-get install -y cron
 
-ADD crontab /etc/cron.d/publisher
+ADD crontab /etc/cron.d/dltl
 
 RUN chmod 0644 /etc/cron.d/dltl
 RUN crontab /etc/cron.d/dltl
