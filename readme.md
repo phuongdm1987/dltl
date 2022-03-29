@@ -23,3 +23,8 @@ Trong phpmyadmin, import file sql `db_core.sql`
 Sửa thông tin database trong file `app/config/database.php` cho phù hợp cấu hình trên localhost
 
 Truy cập trang quản trị qua đường dẫn [http://localhost:8000/admin](http://localhost:8000/admin) với tài khoản `admin@developervn.com | 123456`
+
+--------------------------
+## Run composer
+docker run --rm -v $(pwd):/app composer install
+sudo chown -R $USER:$USER ~/dltl
