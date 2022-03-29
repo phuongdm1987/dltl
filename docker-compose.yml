@@ -11,7 +11,7 @@ services:
       context: docker/php
     container_name: dltl-app-dev
     restart: unless-stopped
-    image: php-fpm
+    image: dltl-app-dev
     working_dir: /var/www/
     volumes:
       - ./:/var/www
