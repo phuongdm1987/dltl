@@ -10,10 +10,11 @@ RUN apt-get update && apt-get install -y zip libzip-dev git unzip libonig-dev li
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pecl install -o -f redis
+RUN pecl install -o -f redis mcrypt
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache mcrypt
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache
+RUN docker-php-ext-enable mcrypt
 
 ARG PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 
