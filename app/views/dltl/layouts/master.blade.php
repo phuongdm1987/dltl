@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" href="/assets/img/favicon_32.png">
+<link rel="icon" href="/assets/img/favicon_32.jpg">
     @include('dltl/includes/metadata')
     <!-- core css -->
     <link rel="stylesheet" href="/assets/css-min/bootstrap.css">

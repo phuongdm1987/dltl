@@ -28,3 +28,7 @@ Truy cập trang quản trị qua đường dẫn [http://localhost:8000/admin](
 ## Run composer
 docker run --rm -v $(pwd):/app composer install
 sudo chown -R $USER:$USER ~/dltl
+
+## Mysql
+docker compose exec mysql bash
+mysl -u root -p dltl < /docker-entrypoint-initdb.d/db_core.sql
