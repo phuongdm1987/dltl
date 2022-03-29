@@ -21,8 +21,10 @@ services:
       context: docker/nginx
     container_name: dltl-nginx
     restart: unless-stopped
+    tty: true
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./:/var/www
 
@@ -30,6 +32,9 @@ services:
     image: 'mysql:8.0'
     container_name: dltl-mysql
     restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
     environment:
       MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
