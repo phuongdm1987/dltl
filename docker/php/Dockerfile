@@ -43,7 +43,15 @@ RUN useradd -G www-data,root -u $uid -d /home/$user $user
 RUN mkdir -p /home/$user/.composer && \
     chown -R $user:$user /home/$user
 
+# Add user for laravel application
+RUN groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www
+
+# Copy existing application directory permissions
+COPY --chown=www:www . /var/www
+
 # Set working directory
 WORKDIR /var/www
 
-USER $user
+# Change current user to www
+USER www
