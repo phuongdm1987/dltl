@@ -41,7 +41,7 @@ services:
       - 'mysql:/var/lib/mysql'
 
   redis:
-    build: ./redis
+    build: docker/redis
     container_name: backend-redis
     volumes:
       - 'redis:/data'
