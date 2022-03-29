@@ -5,7 +5,7 @@ ARG user
 ARG uid
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y zip libzip-dev git unzip libonig-dev
+RUN apt-get update && apt-get install -y zip libzip-dev git unzip libonig-dev libpng-dev zlib1g-dev
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
