@@ -9,7 +9,7 @@ services:
         PHP_OPCACHE_VALIDATE_TIMESTAMPS: ${PHP_OPCACHE_VALIDATE_TIMESTAMPS}
         INSTALL_XDEBUG: ${INSTALL_XDEBUG}
       context: docker/php
-    container_name: dltl-app
+    container_name: dltl-app-dev
     restart: unless-stopped
     image: php-fpm
     working_dir: /var/www/

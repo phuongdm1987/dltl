@@ -1,4 +1,4 @@
-FROM dltl-app
+FROM dltl-app-dev
 
 # Change current user to www
 USER root
