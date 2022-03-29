@@ -1,0 +1,82 @@
+version: '3'
+services:
+
+  app:
+    build:
+      args:
+        user: sammy
+        uid: 1000
+        PHP_OPCACHE_VALIDATE_TIMESTAMPS: ${PHP_OPCACHE_VALIDATE_TIMESTAMPS}
+        INSTALL_XDEBUG: ${INSTALL_XDEBUG}
+      context: docker/php
+    container_name: dltl-app
+    restart: unless-stopped
+    image: php-fpm
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+
+  nginx:
+    build:
+      context: docker/nginx
+    container_name: dltl-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www
+
+  mysql:
+    image: 'mysql:8.0'
+    container_name: dltl-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - 'mysql:/var/lib/mysql'
+
+  redis:
+    build: ./redis
+    container_name: backend-redis
+    volumes:
+      - 'redis:/data'
+    ports:
+      - "6379:6379"
+
+  mailhog:
+    image: 'mailhog/mailhog:latest'
+    container_name: dltl-mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+
+  supervisor:
+    build:
+      context: docker/supervisor
+    container_name: dltl-supervisor
+    volumes:
+      - .:/var/www
+      - ${PWD}/docker/supervisor/supervisord:/etc/supervisord.d
+
+  cron:
+    build:
+      context: docker/cron
+    container_name: dltl-cron
+    volumes:
+      - .:/var/www
+
+#Docker Networks
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  mysql:
+    driver: local
+  redis:
+    driver: local
