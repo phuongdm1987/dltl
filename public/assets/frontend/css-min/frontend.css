@@ -78,3 +78,19 @@
 #header .top .hotline a {
     color: #fff;
 }
+
+#box-search {
+    min-height: unset;
+}
+
+#box-search .bottom {
+    min-height: unset;
+}
+
+#box-search .bottom form .form-group {
+    padding-bottom: 0;
+}
+
+#box-search .bottom form .form-group:last-child {
+    padding-left: 0;
+}

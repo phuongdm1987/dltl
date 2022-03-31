@@ -40,40 +40,12 @@
 
 <div id="box-search">
     <div class="container">
-        <div class="top">
-            <h2 class="pull-left">Tìm kiếm tour</h2>
-            <span class="btn btn-dltl btn-search domestic {{ Session::get('tour_type', Fsd\Tours\Tour::TYPE_INLAND) == Fsd\Tours\Tour::TYPE_INLAND ? 'active' : '' }}" data-value="{{ Fsd\Tours\Tour::TYPE_INLAND }}">Du lịch trong nước</span>
-            <span class="btn btn-dltl btn-search foreign {{ Session::get('tour_type', Fsd\Tours\Tour::TYPE_INLAND) == Fsd\Tours\Tour::TYPE_FOREIGN ? 'active' : '' }}" data-value="{{ Fsd\Tours\Tour::TYPE_FOREIGN }}">Du lịch nước ngoài</span>
-        </div>
         <div class="bottom">
             <form class="form-inline" name="tour_search" action="{{ route('search') }}" method="get">
-                <div class="form-group col-sm-4">
-                    <label for="location"><i class="fa fa-map-marker"></i> Địa danh</label>
+                <div class="form-group col-sm-9 col-xs-12">
                     <input type="text" class="form-control" id="location" name="q" placeholder="Nơi bạn muốn đến" value="{{ Input::get('q') }}">
                 </div>
-                <div class="form-group col-sm-2">
-                    <label for="range_price"><i class="fa fa-usd"></i> Khoảng giá</label>
-                    <select name="range_price" id="range_price" class="form-control">
-                        <option value="">Chọn khoảng giá</option>
-                        <option value="1" {{ Input::get('range_price') == 1 ? 'selected="selected"' : '' }}>Dưới 2 triệu</option>
-                        <option value="2" {{ Input::get('range_price') == 2 ? 'selected="selected"' : '' }}>Từ 2 đến 4 triệu</option>
-                        <option value="3" {{ Input::get('range_price') == 3 ? 'selected="selected"' : '' }}>Từ 4 đến 6 triệu</option>
-                        <option value="4" {{ Input::get('range_price') == 4 ? 'selected="selected"' : '' }}>Từ 6 đến 8 triệu</option>
-                        <option value="5" {{ Input::get('range_price') == 5 ? 'selected="selected"' : '' }}>Từ 8 đến 10 triệu</option>
-                        <option value="6" {{ Input::get('range_price') == 6 ? 'selected="selected"' : '' }}>Trên 10 triệu</option>
-                    </select>
-                </div>
-                <div class="form-group col-sm-2">
-                    <label for="sdate"><i class="fa fa-calendar"></i> Ngày khởi hành</label>
-                    <input type="text" class="form-control datepicker" id="sdate" name="timefrom" placeholder="Ngày khởi hành" value="{{ Input::get('timefrom') }}">
-                </div>
-                <div class="form-group col-sm-1">
-                    <label for="number"><i class="fa fa-users"></i> Số người</label>
-                    <input type="number" class="form-control" id="number" name="number">
-                </div>
                 <div class="form-group">
-                    <label for="number">&nbsp;</label>
-                    <input type="hidden" id="tour_type" name="type" value="{{ Session::get('tour_type', Fsd\Tours\Tour::TYPE_INLAND); }}" />
                     <button type="submit" class="btn btn-dltl"><i class="fa fa-search"></i> Tìm kiếm</button>
                 </div>
             </form>

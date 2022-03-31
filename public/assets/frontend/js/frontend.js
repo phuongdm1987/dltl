@@ -9,11 +9,6 @@ $('.datepicker').datepicker({
     autoclose: true,
     todayHighlight: true
 });
-$('.btn-search').click(function() {
-   $('.btn-search').removeClass('active');
-   $(this).addClass('active');
-   $(this).parents('#box-search').find('#tour_type').val($(this).data('value'));
-});
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
