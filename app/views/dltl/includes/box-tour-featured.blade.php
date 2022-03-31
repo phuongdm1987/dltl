@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="show-hot col-sm-6">
-                <h2 class="title">Tour hot 2016</h2>
+                <h2 class="title">Tour hot {{ \Carbon\Carbon::now()->format('Y') }}</h2>
                 <div class="wapper-content">
                     @foreach($tourInlandHot as $key => $tour)
                         @if($key > 0)
@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="show-hot col-sm-6">
-                <h2 class="title">Tour hot 2016</h2>
+                <h2 class="title">Tour hot {{ \Carbon\Carbon::now()->format('Y') }}</h2>
                 <div class="wapper-content">
                     @foreach($tourForeignHot as $key => $tour)
                         @if($key > 0)

@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="box col-sm-6" id="domestic">
-        <h2 class="title">chương trình du lịch trong nước 2016</h2>
+        <h2 class="title">chương trình du lịch trong nước {{ \Carbon\Carbon::now()->format('Y') }}</h2>
         <div class="wapper-content">
             @foreach($tourInlandProgram as $tour)
                 <div class="item clearfix">
@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="box col-sm-6" id="foreign">
-        <h2 class="title">chương trình du lịch nước ngoài 2016</h2>
+        <h2 class="title">chương trình du lịch nước ngoài {{ \Carbon\Carbon::now()->format('Y') }}</h2>
         <div class="wapper-content">
             @foreach($tourForeignProgram as $tour)
                 <div class="item clearfix">

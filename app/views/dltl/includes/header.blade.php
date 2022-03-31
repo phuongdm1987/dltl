@@ -12,9 +12,9 @@
                 <div class="pull-right">
                     <div class="hotline">
                         <ul class="list-unstyled list-inline">
-                            <li><a href="tel:{{ Config::get('configuration')['hotline1'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline1'] }}</a></li>
-                            <li class="hidden-xs hidden-sm"><a href="tel:{{ Config::get('configuration')['hotline2'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline2'] }}</a></li>
-                            <li class="hidden-xs hidden-sm hidden-md"><a href="tel:{{ Config::get('configuration')['hotline'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline'] }}</a></li>
+                            <li><a href="tel:{{ Config::get('configuration')['hotline'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline'] }}</a></li>
+                            <li class="hidden-xs hidden-sm"><a href="tel:{{ Config::get('configuration')['hotline1'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline1'] }}</a></li>
+                            <li class="hidden-xs hidden-sm hidden-md"><a href="tel:{{ Config::get('configuration')['hotline2'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline2'] }}</a></li>
                         </ul>
                     </div>
                     <ul class="list-unstyled list-inline list-auth">
