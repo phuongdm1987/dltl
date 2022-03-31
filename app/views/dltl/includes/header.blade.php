@@ -11,7 +11,11 @@
                 </div>
                 <div class="pull-right">
                     <div class="hotline">
-                        <i class="fa fa-phone"></i> Hotline: {{ Config::get('configuration')['hotline'] }}
+                        <ul class="list-unstyled list-inline">
+                            <li><a href="tel:{{ Config::get('configuration')['hotline1'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline1'] }}</a></li>
+                            <li class="hidden-xs hidden-sm"><a href="tel:{{ Config::get('configuration')['hotline2'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline2'] }}</a></li>
+                            <li class="hidden-xs hidden-sm hidden-md"><a href="tel:{{ Config::get('configuration')['hotline'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline'] }}</a></li>
+                        </ul>
                     </div>
                     <ul class="list-unstyled list-inline list-auth">
                         @if(!$GLB_Login->check())

@@ -54,15 +54,15 @@
         <ul class="clearfix">
             <li>
                 <span class="red-dark">Office:</span>
-                <span class="text-df">0466.894.777</span>
+                <span class="text-df">{{ Config::get('configuration')['hotline1'] }}</span>
             </li>
             <li>
                 <span class="red-dark">Mobile:</span>
-                <span class="text-df">0927.253.666</span>
+                <span class="text-df">{{ Config::get('configuration')['hotline2'] }}</span>
             </li>
             <li class="hidden-xs" id="SkypeButton_Call_dulichthanglong1_1" data-toggle="tooltip" title="Du Lịch Thăng Long"></li>
             <li class="hidden-xs" id="SkypeButton_Call_caothanhdoan_1" data-toggle="tooltip" title="Cao Thanh Đoàn"></li>
-            <li><a href="https://www.facebook.com/dulichthanglong.vn" data-toggle="tooltip" title="Du lịch thăng long" class="btn btn-xs"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+            <li><a href="{{ $setting->getFacebook() }}" data-toggle="tooltip" title="Du lịch thăng long" class="btn btn-xs"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
         </ul>
     </div>
 

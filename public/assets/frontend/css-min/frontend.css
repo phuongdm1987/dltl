@@ -64,3 +64,17 @@
    margin: 0px!important;
    vertical-align: 0px!important;
 }
+
+#header .top .hotline {
+    margin-top: 36.5px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+#header .top .hotline ul {
+    margin: 0;
+}
+
+#header .top .hotline a {
+    color: #fff;
+}

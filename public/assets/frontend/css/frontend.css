@@ -34,7 +34,7 @@ body {
     margin: 36px 0px; }
     #header .top .sologan p {
       margin: 0px; }
-  #header .top .hotline {
+  #header .top .hotline, #header .top .hotline a {
     padding: 15px;
     margin-top: 28.5px;
     margin-left: 70px;
