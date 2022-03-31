@@ -255,8 +255,9 @@ class TourController extends AdminController {
 		$cities    = $this->city->getAllCity();
 		$weeks     = $this->getTypeByWeek();
 		$countries = $this->mContry->getAllCountry();
+        $tourTypes 	= Tour::getTypeNames();
 
-		return View::make('backend/tours/edit', compact('tour', 'cities', 'weeks', 'countries', 'content', 'photos', 'weeks_db'));
+		return View::make('backend/tours/edit', compact('tour', 'cities', 'weeks', 'countries', 'content', 'photos', 'weeks_db', 'tourTypes'));
 	}
 
 	public function postEdit($id = 0) {

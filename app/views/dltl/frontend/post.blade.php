@@ -9,7 +9,7 @@
                     <div class="box-inside clearfix" id="tour-detail">
                         @include ('frontend/breadcrumbs')
                         <div class="box" id="domestic">
-                            <h1 class="title">{{ $category->name }}</h1>
+                            <h1 class="title">{{ isset($category) ? $category->name : 'Tin Tức' }}</h1>
                             <div class="tour-content">
                                 <div class="data">
                                     @foreach($posts as $post)

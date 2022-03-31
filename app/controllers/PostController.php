@@ -42,4 +42,18 @@ class PostController extends BaseController {
 
       return View::make('dltl/frontend/post', compact('posts', 'category'));
    }
+
+    /*
+    * Danh sach tour theo country
+    * @return array tour by country
+    */
+    public function getAll() {
+        //Meta data
+        $this->metadata->setTitle("Tin Tức :: " . $this->metadata->getTitle());
+        $this->metadata->setDescription('Tin tức, cẩm nang du lịch');
+
+        $posts = $this->post->getAll(25);
+
+        return View::make('dltl/frontend/post', compact('posts'));
+    }
 }

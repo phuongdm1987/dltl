@@ -51,7 +51,7 @@
 		<div class="form-group {{ $errors->has('pla_sector') ? 'has-error' : '' }}">
 			<label for="pla_sector" class="col-sm-3 control-label">Phân loại khu vực <b class="text-danger">*</b></label>
 			<div class="col-sm-3">
-				{{ Form::select('pla_sector',  [1 => 'Trong nước', 2 => 'Nước ngoài'], $place->pla_sector, ['class' => 'form-control']) }}
+				{{ Form::select('pla_sector', $tourTypes, $place->pla_sector, ['class' => 'form-control']) }}
 				{{ $errors->first('pla_sector', '<span class="help-inline text-danger">:message</span>') }}
 			</div>
 		</div>

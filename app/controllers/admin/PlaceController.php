@@ -6,6 +6,7 @@ use Fsd\Places\PlaceRepository;
 use Fsd\Cities\CityRepository;
 use Fsd\CategoryPlaces\CatPlaceRepository;
 use Fsd\Countries\CountryRepository;
+use Fsd\Tours\Tour;
 use Fsd\Validators\PlaceValidator;
 use Libs\UploadService;
 use View, Response, Request, Redirect, DataGrid, Input, App, Xss, Str;
@@ -101,16 +102,13 @@ class PlaceController extends AdminController {
 	public function getCreate() {
 
 		$cities 		= $this->city->getAllCity();
-
 		$cit_id 		= Input::old('pla_city_id', 0);
-
 		$districts 	= $this->city->getDistrictsByCityId($cit_id);
-
 		$cplaces 	= $this->cplace->getAllCatPlace();
+        $countries 	= $this->country->getAllCountry();
+        $tourTypes 	= Tour::getTypeNames();
 
-		$countries 	= $this->country->getAllCountry();
-
-		return View::make('backend/places/create', compact('cities', 'districts', 'cplaces', 'countries'));
+		return View::make('backend/places/create', compact('cities', 'districts', 'cplaces', 'countries', 'tourTypes'));
 	}
 
 	public function postCreate() {
@@ -161,18 +159,14 @@ class PlaceController extends AdminController {
 		if(!$place) return Redirect::to(route('place.index'))->with('error', 'Không tìm thấy bản ghi phù hợp');
 
 		$cities 		= $this->city->getAllCity();
-
 		$cit_id 		= Input::old('pla_city_id', 0);
-
 		$districts 	= $this->city->getDistrictsByCityId($place->pla_city_id);
-
 		$pladeImages = $this->place->getImagePlaceById($place);
-
 		$cplaces 	= $this->cplace->getAllCatPlace();
-
 		$countries 	= $this->country->getAllCountry();
+        $tourTypes 	= Tour::getTypeNames();
 
-		return View::make('backend/places/edit', compact('cities', 'districts', 'place', 'pladeImages', 'cplaces', 'countries'));
+		return View::make('backend/places/edit', compact('cities', 'districts', 'place', 'pladeImages', 'cplaces', 'countries', 'tourTypes'));
 	}
 
 	public function postEdit($id) {

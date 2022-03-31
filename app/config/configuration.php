@@ -25,11 +25,9 @@ return array(
 
 	'email' => 'info@waa.com', // Email liên hệ
 
-	'phone' => '0975.930.251', // Điện thoại liên hệ
-
-	'skype' => '', // Nick chat skype hộ trợ
-
-	'yahoo' => '', // Nick chat skype hộ trợ
+    'hotline' => '0927.253.666',
+	'hotline1' => '024.3822.6688',
+    'hotline2' => '087.903.6688',
 
 	'array_resize_image' => array(
 		'sm' => array('width' => 200, 'height' => 5000),

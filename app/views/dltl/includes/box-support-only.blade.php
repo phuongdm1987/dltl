@@ -11,10 +11,10 @@
     </div> -->
     <div class="item clearfix">
         <span class="title pull-left"><i class="fa fa-phone"></i> Hotline 1</span>
-        <span class="content pull-right">0466.984.777</span>
+        <span class="content pull-right">{{ Config::get('configuration')['hotline1'] }}</span>
     </div>
     <div class="item clearfix">
         <span class="title pull-left"><i class="fa fa-phone"></i> Hotline 2</span>
-        <span class="content pull-right">0462.949.495</span>
+        <span class="content pull-right">{{ Config::get('configuration')['hotline2'] }}</span>
     </div>
 </div>

@@ -8,12 +8,28 @@ class Tour extends Entity {
 	protected $primaryKey  = 'tou_id';
 	public $timestamps     = false;
 
-	const TYPE_INLAND      = 1;
-	const TYPE_FOREIGN     = 2;
+	const TYPE_INLAND = 1;
+	const TYPE_FOREIGN = 2;
+    const TYPE_COMBO = 3;
+    const TYPE_CRUISE = 4;
 
 	const TYPE = [
-		self::TYPE_INLAND => 'Trong nước',
-		self::TYPE_FOREIGN => 'Nước ngoài',
+        self::TYPE_COMBO => [
+            'name' => 'Combo du lịch',
+            'slug' => 'combo-du-lich',
+        ],
+		self::TYPE_INLAND => [
+            'name' => 'Trong nước',
+            'slug' => 'trong-nuoc',
+        ],
+		self::TYPE_FOREIGN => [
+            'name' => 'Nước ngoài',
+            'slug' => 'nuoc-ngoai',
+        ],
+        self::TYPE_CRUISE => [
+            'name' => 'Du thuyền Hạ Long',
+            'slug' => 'du-thuyen-ha-long',
+        ],
 	];
 
 	const STATUS_ACTIVE    = 1;
@@ -137,4 +153,11 @@ class Tour extends Entity {
 
 		return implode(", ", $place_list);
 	}
+
+    public static function getTypeNames()
+    {
+        return array_map(function ($type) {
+            return $type['name'];
+        }, self::TYPE);
+    }
 }

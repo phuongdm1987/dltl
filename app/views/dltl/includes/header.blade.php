@@ -11,7 +11,7 @@
                 </div>
                 <div class="pull-right">
                     <div class="hotline">
-                        <i class="fa fa-phone"></i> Hotline: 0927.253.666
+                        <i class="fa fa-phone"></i> Hotline: {{ Config::get('configuration')['hotline'] }}
                     </div>
                     <ul class="list-unstyled list-inline list-auth">
                         @if(!$GLB_Login->check())
@@ -53,12 +53,10 @@
                     <ul class="nav navbar-nav">
                         <li class="{{ Route::is('home') ? 'active' : ''}}"><a href="{{ route('home') }}">Trang chủ</a></li>
                         <li><a href="#">Giới thiệu</a></li>
-                        <li><a href="#">Khuyến mại</a></li>
-                        <li class="{{ Request::is('*/tour-du-lich-trong-nuoc') ? 'active' : ''}}"><a href="{{ route('tour.by.type', [Fsd\Tours\Tour::TYPE_INLAND, 'trong-nuoc']) }}">Tour trong nước</a></li>
-                        <li class="{{ Request::is('*/tour-du-lich-nuoc-ngoai') ? 'active' : ''}}"><a href="{{ route('tour.by.type', [Fsd\Tours\Tour::TYPE_FOREIGN, 'nuoc-ngoai']) }}">Tour nước ngoài</a></li>
-                        @foreach($GLB_Categories as $category)
-                            <li class="{{ Request::is('*post/list/' . $category->id . '-*') ? 'active' : ''}}"><a href="{{ $category->getUrlBlog() }}">{{ $category->name }}</a></li>
+                        @foreach(\Fsd\Tours\Tour::TYPE as $typeId => $type)
+                            <li class="{{ Request::is('*tour/type/' . $typeId . '/*') ? 'active' : ''}}"><a href="{{ route('tour.by.type', [$typeId, $type['slug']]) }}">{{ $type['name'] }}</a></li>
                         @endforeach
+                        <li class="{{ Request::is('*post/*') ? 'active' : ''}}"><a href="{{ route('post.listAll') }}">Tin tức - Cẩm nang du lịch</a></li>
                         <!-- <li><a href="#">Khách hàng</a></li>
                         <li><a href="#">Dịch vụ visa</a></li>
                         <li><a href="#">Thuê xe</a></li>

@@ -50,6 +50,10 @@ Route::group([ 'prefix' => 'post'], function() {
       'as' => 'post.list',
       'uses' => 'PostController@getPostByCategory'
    ]);
+    Route::get('/lists', [
+        'as' => 'post.listAll',
+        'uses' => 'PostController@getAll'
+    ]);
 });
 
 Route::get('/lien-he.html', [

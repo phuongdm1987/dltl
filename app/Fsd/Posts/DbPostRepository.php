@@ -43,4 +43,11 @@ class DbPostRepository extends EloquentRepository implements PostRepository{
          ->where('pos_category_id', $id)
          ->paginate($count);
    }
+
+    public function getAll($count = 10)
+    {
+        return $this->model
+            ->where('pos_active', 1)
+            ->paginate($count);
+    }
 }

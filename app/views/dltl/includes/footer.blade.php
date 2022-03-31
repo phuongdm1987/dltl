@@ -36,8 +36,8 @@
             <div class="col-sm-3 contact">
                 <p class="title">Mọi thắc mắc vui lòng liên hệ</p>
                 <div class="phone">
-                    <p><span>Hà Nội</span><span class="pull-right">0466.984.777</span></p>
-                    <p><span>Hồ Chí Minh</span><span class="pull-right">0462.949.495</span></p>
+                    <p><span>Phòng kinh doanh</span><span class="pull-right">{{ Config::get('configuration')['hotline1'] }}</span></p>
+                    <p><span>phòng điều hành</span><span class="pull-right">{{ Config::get('configuration')['hotline2'] }}</span></p>
                 </div>
                 <p class="note">(!!) Giải quyết mọi thắc mắc của bạn 24/7</p>
             </div>

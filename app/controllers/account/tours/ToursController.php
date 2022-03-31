@@ -84,11 +84,12 @@ class ToursController extends AuthorizedController {
 		$cities 		= $this->mCity->getAllCity();
 		$weeks		= $this->getTypeByWeek();
 		$countries 	= $this->mContry->getAllCountry();
+        $tourTypes 	= Tour::getTypeNames();
 
 		if ($id > 0) {
-			return View::make('/frontend/account/tours/edit', compact('tour', 'cities', 'weeks', 'countries', 'content', 'photos', 'weeks_db'));
+			return View::make('/frontend/account/tours/edit', compact('tour', 'cities', 'weeks', 'countries', 'content', 'photos', 'weeks_db', 'tourTypes'));
 		}else{
-			return View::make('/frontend/account/tours/edit', compact('tour', 'cities', 'weeks', 'countries'));
+			return View::make('/frontend/account/tours/edit', compact('tour', 'cities', 'weeks', 'countries', 'tourTypes'));
 		}
 	}
 

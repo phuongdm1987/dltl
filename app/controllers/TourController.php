@@ -93,7 +93,7 @@ class TourController extends BaseController {
 	*/
 	public function getTourByType($type = 0) {
 
-		$type_name = array_key_exists($type, Tour::TYPE) ? Tour::TYPE[$type] : 'Trong nước';
+		$type_name = array_key_exists($type, Tour::TYPE) ? Tour::getTypeNames()[$type] : 'Trong nước';
 
      	$params = [
 			'sort'  => Input::get('sort', 0),

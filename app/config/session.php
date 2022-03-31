@@ -94,7 +94,7 @@ return array(
 	|
 	*/
 
-	'cookie' => 'laravel_session_4',
+	'cookie' => 'dltl_session',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -120,7 +120,7 @@ return array(
 	|
 	*/
 
-	'domain' => '',
+	'domain' => 'dltl.local',
 
 	'expire_on_close' => false
 
