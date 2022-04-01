@@ -40,6 +40,7 @@
                     <p><span>phòng điều hành</span><span class="pull-right">{{ Config::get('configuration')['hotline2'] }}</span></p>
                 </div>
                 <p class="note">(!!) Giải quyết mọi thắc mắc của bạn 24/7</p>
+                <p class="certificates"><img src="/assets/img/bo_cong_thuong.png" alt=""><img src="/assets/img/ncsc.png" alt=""></p>
             </div>
         </div>
     </div>

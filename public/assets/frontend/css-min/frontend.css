@@ -94,3 +94,7 @@
 #box-search .bottom form .form-group:last-child {
     padding-left: 0;
 }
+
+#footer .certificates {
+    background-color: #fff;
+}
