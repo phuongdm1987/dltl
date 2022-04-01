@@ -19,12 +19,12 @@ class Tour extends Entity {
             'slug' => 'combo-du-lich',
         ],
 		self::TYPE_INLAND => [
-            'name' => 'Trong nước',
-            'slug' => 'trong-nuoc',
+            'name' => 'Tour trong nước',
+            'slug' => 'tour-trong-nuoc',
         ],
 		self::TYPE_FOREIGN => [
-            'name' => 'Nước ngoài',
-            'slug' => 'nuoc-ngoai',
+            'name' => 'Tour nước ngoài',
+            'slug' => 'tour-nuoc-ngoai',
         ],
         self::TYPE_CRUISE => [
             'name' => 'Du thuyền Hạ Long',

@@ -2,7 +2,7 @@
     <div class="top">
         <div class="container clearfix inside">
             <h1 id="logo" class="pull-left" title="Du lịch thăng long">
-                <img src="/assets/img/logo.png" alt="Du lịch thăng long" />
+                <a href="{{ route('home') }}"><img src="/assets/img/logo.png" alt="Du lịch thăng long" /></a>
             </h1>
             <div class="pull-right">
                 <div class="sologan pull-left hidden-xs hidden-sm">
@@ -60,11 +60,8 @@
                         @foreach(\Fsd\Tours\Tour::TYPE as $typeId => $type)
                             <li class="{{ Request::is('*tour/type/' . $typeId . '/*') ? 'active' : ''}}"><a href="{{ route('tour.by.type', [$typeId, $type['slug']]) }}">{{ $type['name'] }}</a></li>
                         @endforeach
-                        <li class="{{ Request::is('*post/*') ? 'active' : ''}}"><a href="{{ route('post.listAll') }}">Tin tức - Cẩm nang du lịch</a></li>
-                        <!-- <li><a href="#">Khách hàng</a></li>
-                        <li><a href="#">Dịch vụ visa</a></li>
-                        <li><a href="#">Thuê xe</a></li>
-                        <li><a href="#">Tin du lịch</a></li> -->
+                        <li class="{{ Request::is('*post/*') && !Request::is('*post/5/*') ? 'active' : ''}}"><a href="{{ route('post.listAll') }}">Tin tức</a></li>
+                        <li class="{{ Request::is('*post/5/*') ? 'active' : ''}}"><a href="{{ route('post.list', [5, 'cam-nang-du-lich']) }}">Cẩm nang du lịch</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </nav>
