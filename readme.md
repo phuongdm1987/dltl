@@ -35,3 +35,7 @@ mysl -u root -p dltl < /docker-entrypoint-initdb.d/db_core.sql
 
 ## Token mismatch
 check line separator of .env.php, convert CRLF to LF
+find . -type f -exec dos2unix {} \;
+
+## Digitalocean
+update code need docker compose down/up to load new update
