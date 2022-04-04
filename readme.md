@@ -32,3 +32,6 @@ sudo chown -R $USER:$USER ~/dltl
 ## Mysql
 docker compose exec mysql bash
 mysl -u root -p dltl < /docker-entrypoint-initdb.d/db_core.sql
+
+## Token mismatch
+check line separator of .env.php, convert CRLF to LF
