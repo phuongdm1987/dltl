@@ -160,7 +160,7 @@ Route::group(['prefix' => 'tour'], function() {
       'uses' => 'TourController@getTourByCountry'
    ]);
 
-   Route::get('/type/{id}/tour-du-lich-{cou_slug}', [
+   Route::get('/type/{id}/{cou_slug}', [
       'as' => 'tour.by.type',
       'uses' => 'TourController@getTourByType'
    ]);
