@@ -16,7 +16,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'cookie',
+	'driver' => 'array',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -120,8 +120,8 @@ return array(
 	|
 	*/
 
-	'domain' => 'dltl.local',
+	'domain' => '',
 
-	'expire_on_close' => false
+	'expire_on_close' => false,
 
 );

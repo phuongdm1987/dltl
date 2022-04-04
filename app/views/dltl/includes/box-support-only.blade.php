@@ -11,10 +11,10 @@
     </div> -->
     <div class="item clearfix">
         <span class="title pull-left"><i class="fa fa-phone"></i> Hotline 1</span>
-        <span class="content pull-right">{{ Config::get('configuration')['hotline1'] }}</span>
+        <span class="content pull-right"><a href="tel:{{ Config::get('configuration')['hotline1'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline1'] }}</a></span>
     </div>
     <div class="item clearfix">
         <span class="title pull-left"><i class="fa fa-phone"></i> Hotline 2</span>
-        <span class="content pull-right">{{ Config::get('configuration')['hotline2'] }}</span>
+        <span class="content pull-right"><a href="tel:{{ Config::get('configuration')['hotline2'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline2'] }}</a></span>
     </div>
 </div>

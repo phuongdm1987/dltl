@@ -36,8 +36,8 @@
             <div class="col-sm-3 contact">
                 <p class="title">Mọi thắc mắc vui lòng liên hệ</p>
                 <div class="phone">
-                    <p><span>Phòng kinh doanh</span><span class="pull-right">{{ Config::get('configuration')['hotline1'] }}</span></p>
-                    <p><span>phòng điều hành</span><span class="pull-right">{{ Config::get('configuration')['hotline2'] }}</span></p>
+                    <p><span>Phòng kinh doanh</span><span class="pull-right"><a href="tel:{{ Config::get('configuration')['hotline1'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline1'] }}</a></span></p>
+                    <p><span>phòng điều hành</span><span class="pull-right"><a href="tel:{{ Config::get('configuration')['hotline2'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline2'] }}</a></span></p>
                 </div>
                 <p class="note">(!!) Giải quyết mọi thắc mắc của bạn 24/7</p>
                 <p class="certificates"><img src="/assets/img/bo_cong_thuong.png" alt=""><img src="/assets/img/ncsc.png" alt=""></p>
@@ -55,11 +55,11 @@
         <ul class="clearfix">
             <li>
                 <span class="red-dark">Office:</span>
-                <span class="text-df">{{ Config::get('configuration')['hotline1'] }}</span>
+                <span class="text-df"><a href="tel:{{ Config::get('configuration')['hotline1'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline1'] }}</a></span>
             </li>
             <li>
                 <span class="red-dark">Mobile:</span>
-                <span class="text-df">{{ Config::get('configuration')['hotline2'] }}</span>
+                <span class="text-df"><a href="tel:{{ Config::get('configuration')['hotline2'] }}"><i class="fa fa-phone"></i>{{ Config::get('configuration')['hotline2'] }}</a></span>
             </li>
             <li class="hidden-xs" id="SkypeButton_Call_dulichthanglong1_1" data-toggle="tooltip" title="Du Lịch Thăng Long"></li>
             <li class="hidden-xs" id="SkypeButton_Call_caothanhdoan_1" data-toggle="tooltip" title="Cao Thanh Đoàn"></li>
