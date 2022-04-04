@@ -1,7 +1,5 @@
 <?php
 use Fsd\Users\UserRepository;
-use Fsd\Users\UserCreatorListener;
-use Fsd\Users\UserCreator;
 use Fsd\Validators\LoginValidator;
 
 class LoginController extends BaseController {
@@ -15,6 +13,7 @@ class LoginController extends BaseController {
 	}
 
 	public function getLogin() {
+        setcookie('demo', 'test');
 		if(\Auth::check()) {
 			return $this->redirectRoute('home');
 		}
