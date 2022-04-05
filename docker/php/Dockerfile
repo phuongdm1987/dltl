@@ -15,7 +15,6 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libwebp-dev \
     libjpeg-dev \
-    libjpeg-turbo-dev \
     libpng-dev libxpm-dev \
     libfreetype6-dev \
     libmcrypt-dev \
