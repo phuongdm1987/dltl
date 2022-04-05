@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libwebp-dev \
     libjpeg-dev \
+    libjpeg-turbo-dev \
     libpng-dev libxpm-dev \
     libfreetype6-dev \
     libmcrypt-dev \
@@ -25,18 +26,11 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pecl install -o -f redis mcrypt
 
-RUN docker-php-ext-configure gd \
-    --with-gd \
-    --with-webp-dir \
-    --with-jpeg-dir \
-    --with-png-dir \
-    --with-zlib-dir \
-    --with-xpm-dir \
-    --with-freetype-dir \
-    --enable-gd-native-ttf
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
+RUN docker-php-ext-install -j$(getconf _NPROCESSORS_ONLN) gd
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath opcache
 RUN docker-php-ext-enable mcrypt
 
 ARG PHP_OPCACHE_VALIDATE_TIMESTAMPS="1"
