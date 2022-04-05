@@ -38,4 +38,6 @@ check line separator of .env.php, convert CRLF to LF
 find . -type f -exec dos2unix {} \;
 
 ## Digitalocean
-update code need docker compose down/up to load new update
+- update code need docker compose down/up to load new update
+- set PHP_OPCACHE_VALIDATE_TIMESTAMPS='1' because use docker and need to load new code change
+- add hosts for domain

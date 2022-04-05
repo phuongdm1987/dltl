@@ -26,7 +26,7 @@ return array(
 	'email' => 'info@waa.com', // Email liên hệ
 
     'hotline' => '0927.253.666',
-	'hotline1' => '024.3822.6688',
+	'hotline1' => '024.3882.6688',
     'hotline2' => '087.903.6688',
 
 	'array_resize_image' => array(
