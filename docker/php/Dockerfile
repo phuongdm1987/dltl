@@ -6,7 +6,7 @@ ARG uid
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-  zip \
+    zip \
     libzip-dev \
     git \
     unzip \
@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libmcrypt-dev \
     libjpeg-dev \
-    libfreetype6-dev
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -23,7 +24,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN pecl install -o -f redis mcrypt
 
 # Install PHP extensions
-RUN docker-php-ext-configure gd --with-jpeg-dir --with-freetype-dir
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache
 RUN docker-php-ext-enable mcrypt
 
