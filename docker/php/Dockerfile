@@ -16,7 +16,8 @@ RUN apt-get update && apt-get install -y \
     libmcrypt-dev \
     libjpeg-dev \
     libfreetype6-dev \
-    libjpeg62-turbo-dev
+    libjpeg62-turbo-dev \
+    libmagickwand-dev
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -24,9 +25,9 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN pecl install -o -f redis mcrypt
 
 # Install PHP extensions
-RUN docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache
-RUN docker-php-ext-enable mcrypt
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/lib --with-png-dir=/usr/lib --with-jpeg-dir=/usr/lib
+RUN docker-php-ext-install pdo_mysql mbstring exif zip pcntl bcmath gd opcache exif
+RUN docker-php-ext-enable mcrypt exif
 
 ARG PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 
