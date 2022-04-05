@@ -6,30 +6,39 @@ ARG uid
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    zip \
+  zip \
     libzip-dev \
     git \
     unzip \
     libonig-dev \
     libpng-dev \
     zlib1g-dev \
-    libmcrypt-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
+    libwebp-dev \
     libjpeg62-turbo-dev \
-    libmagickwand-dev
+    libpng-dev libxpm-dev \
+    libfreetype6-dev \
+    libmcrypt-dev
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pecl install -o -f redis mcrypt
 
-# Install PHP extensions
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/lib --with-png-dir=/usr/lib --with-jpeg-dir=/usr/lib
-RUN docker-php-ext-install pdo_mysql mbstring exif zip pcntl bcmath gd opcache exif
-RUN docker-php-ext-enable mcrypt exif
+RUN docker-php-ext-configure gd \
+    --with-gd \
+    --with-webp-dir \
+    --with-jpeg-dir \
+    --with-png-dir \
+    --with-zlib-dir \
+    --with-xpm-dir \
+    --with-freetype-dir \
+    --enable-gd-native-ttf
 
-ARG PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
+# Install PHP extensions
+RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd opcache
+RUN docker-php-ext-enable mcrypt
+
+ARG PHP_OPCACHE_VALIDATE_TIMESTAMPS="1"
 
 COPY opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
