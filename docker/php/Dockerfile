@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libpng-dev libxpm-dev \
     libfreetype6-dev \
+    libjpeg62-turbo-dev \
     libmcrypt-dev \
     g++
 
@@ -25,7 +26,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pecl install -o -f redis mcrypt
 
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/
+RUN docker-php-ext-configure gd --with-freetype-dir --with-jpeg-dir --with-png-dir
 RUN docker-php-ext-install -j$(getconf _NPROCESSORS_ONLN) gd
 
 # Install PHP extensions
