@@ -14,10 +14,11 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     zlib1g-dev \
     libwebp-dev \
-    libjpeg62-turbo-dev \
+    libjpeg-dev \
     libpng-dev libxpm-dev \
     libfreetype6-dev \
-    libmcrypt-dev
+    libmcrypt-dev \
+    g++
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
