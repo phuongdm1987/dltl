@@ -57,7 +57,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Add user for laravel application
 RUN getent group www-data || groupadd -g 1000 www-data
-RUN useradd -u 1000 -ms /bin/bash -g www-data www-data
+RUN id -u 1000 &>/dev/null || useradd -u 1000 -ms /bin/bash -g www-data www-data
 
 # Copy existing application directory permissions
 COPY --chown=www-data:www-data . /var/www
