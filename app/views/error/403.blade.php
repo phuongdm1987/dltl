@@ -6,7 +6,7 @@
 	<title>Error 403 - Forbidden</title>
 	<meta name="viewport" content="width=device-width">
 	<style type="text/css">
-		@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+		@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
 		hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 		body
 		{

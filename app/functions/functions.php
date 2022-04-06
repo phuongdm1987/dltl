@@ -692,7 +692,7 @@ function fsdHead($echo = true) {
 
       '. doAction($hookPlugin) .'
 
-      <link href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic|Roboto+Condensed:400,400italic|Roboto+Slab&subset=latin,vietnamese" rel="stylesheet" type="text/css"/>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic|Roboto+Condensed:400,400italic|Roboto+Slab&subset=latin,vietnamese" rel="stylesheet" type="text/css"/>
 
       <script src="'. asset('assets/js/jquery.1.10.2.min.js') .'"></script>
 		<script src="'. asset('assets/js/html5.js') .'"></script>

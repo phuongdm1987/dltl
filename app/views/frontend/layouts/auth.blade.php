@@ -10,7 +10,7 @@
       <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
       <link href="{{ asset('assets/css/bootstrap-social.css') }}" rel="stylesheet">
       <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
-      <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
       <link href="{{ asset('assets/css/common.css') }}" rel="stylesheet">
       <link href="{{ asset('assets/css/auth.css') }}" rel="stylesheet">
       @yield('styles')

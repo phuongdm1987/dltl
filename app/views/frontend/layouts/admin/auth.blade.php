@@ -24,7 +24,7 @@
       ================================================== -->
       <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
       <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
-      <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
       <link href="{{ asset('assets/css/admin-auth.css') }}" rel="stylesheet">
 
       <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

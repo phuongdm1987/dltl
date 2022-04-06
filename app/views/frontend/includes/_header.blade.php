@@ -23,7 +23,7 @@
       <meta name="twitter:description" content="Trang thông tin tour Viêt Nam và nước ngoài">
       <meta name="twitter:creator" content="@fsd14">
 
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
 		<!-- Bootstrap and Font Awesome css -->
 		<link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}"/>
