@@ -103,8 +103,6 @@ Route::group(['prefix' => 'admin'], function() {
 		]);
 	});
 
-    Route::post('/upload/images', ['as' => 'upload.images', 'uses' => 'Controllers\Admin\PostsController@uploadImage']);
-
 	// Posts
 	Route::group(['prefix' 	 => 'posts'], function() {
 		Route::get('/', [

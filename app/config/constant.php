@@ -58,6 +58,9 @@ define('PATH_IMAGE_PLACE', '/upload/places/');
 define('PATH_UPLOAD_IMAGE_TOUR', rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/upload/tours/');
 define('PATH_IMAGE_TOUR', '/upload/tours/');
 
+define('PATH_UPLOAD_IMAGES', rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/upload/images/');
+define('PATH_IMAGES', '/upload/images/');
+
 // Path assets
 define('PATH_ASSETS', '/assets/');
 

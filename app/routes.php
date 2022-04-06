@@ -30,6 +30,7 @@ require $app['path.base'] . '/app/routes_auth.php';
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@getIndex']);
 Route::get('/tour', ['as' => 'home-active', 'uses' => 'HomeController@getTour']);
+Route::post('/admin/upload/images', ['as' => 'upload.images', 'uses' => 'ImageController@upload']);
 
 // Pages
 //
