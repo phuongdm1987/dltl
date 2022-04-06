@@ -475,8 +475,10 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 
 	public function getTourHotNew(Tour $tour, $count = 20) {
 		return $this->model->where('tou_type', $tour->tou_type)
-								->where('tou_hot', 1)->orderBy('tou_created_time', 'DESC')
-								->take($count)->get();
+            ->where('tou_hot', 1)
+            ->where('tou_confirm', 1)
+            ->orderBy('tou_created_time', 'DESC')
+            ->take($count)->get();
 	}
 
 	public function getTourInlandHot($count = 7)

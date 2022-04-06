@@ -7,6 +7,7 @@
          Administration
          @show
       </title>
+      <meta name="csrf-token" content="{{ csrf_token() }}" />
       <meta name="keywords" content="Administrator page" />
       <meta name="author" content="Flypaper" />
       <meta name="description" content="Administrator page" />
@@ -48,6 +49,7 @@
 
       <!-- Javascripts
       ================================================== -->
+      <script src="{{ asset('assets/js/ckeditor/ckeditor.js') }}"></script>
       <script src="{{ asset('assets/js/jquery.1.10.2.min.js') }}"></script>
       <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
       <script src="{{ asset('assets/js/main.js') }}"></script>

@@ -1,7 +1,8 @@
 @extends('dltl/layouts/master')
 
 @section('content')
-    @include('/dltl/includes/box-silder')
+    @include('/dltl/includes/box-slider')
+    @include('/dltl/includes/box-search')
 
     <div class="">
         <div class="container" id="body-content">

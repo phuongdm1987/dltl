@@ -28,7 +28,7 @@
 		<div class="col-sm-6">
 			{{ Form::text('pos_icon', $post->pos_icon, ['class' => 'form-control', 'placeholder' => 'VD: fa fa-book']) }}
 			{{ $errors->first('pos_icon', '<span class="help-inline text-danger">:message</span>') }}
-			<div>Support <a href="http://getbootstrap.com/components/#glyphicons" target="_blank">Bootstrap</a> &amp; <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">Fontawesome</a> icons</div>
+			<div>Support <a href="https://getbootstrap.com/components/#glyphicons" target="_blank">Bootstrap</a> &amp; <a href="https://fortawesome.github.io/Font-Awesome/icons/" target="_blank">Fontawesome</a> icons</div>
 		</div>
 	</div>
 
