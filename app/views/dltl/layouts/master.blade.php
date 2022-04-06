@@ -4,6 +4,7 @@
 <link rel="icon" href="/assets/img/favicon_32.jpg">
     @include('dltl/includes/metadata')
     <!-- core css -->
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <link rel="stylesheet" href="/assets/css-min/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/assets/js/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
     <link href="/assets/css/font-awesome.min.css" rel="stylesheet">

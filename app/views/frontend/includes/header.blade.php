@@ -16,6 +16,7 @@
 		<meta property="og:site_name" content="description" />
 		<meta property="og:url" content="{{ URL::current() }}" />
 		<meta name="google-site-verification" content="l3ZGqq02KLkUgHxGTESahxpvppqgGdrjgCgShsy4apc" />
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
 
       <link rel="icon" href="{{ asset('assets/ico/favicon.ico') }}" type="image/gif" sizes="16x16">
       <link rel="icon" href="{{ asset('assets/ico/favicon.ico') }}" type="image/gif" sizes="32x32">

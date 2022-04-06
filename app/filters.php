@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Request;
+
 App::before(function($request)
 {
 	//
@@ -126,7 +128,8 @@ Route::filter('root.login', function() {
 
 Route::filter('csrf', function()
 {
-	if (Session::token() != Input::get('_token'))
+    $inputCsrfToken = Request::header('X-CSRF-TOKEN') ?: Input::get('_token');
+	if (Session::token() != $inputCsrfToken)
 	{
 		throw new Illuminate\Session\TokenMismatchException;
 	}

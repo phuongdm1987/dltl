@@ -27,49 +27,31 @@ $(function() {
 	};
 	$.datepicker.setDefaults($.datepicker.regional['vi']);
 
-	// TinyMCE - Config
-	tinymce.init({
-		selector: ".content",
-		width: 750,
-	 	height: 150,
-		// ===========================================
-		// INCLUDE THE PLUGIN
-		// ===========================================
+    var allEditors = document.querySelectorAll('textarea.content');
+    for (var i = 0; i < allEditors.length; ++i) {
+        createCkEditor(allEditors[i]);
+    }
 
-	  	plugins: [
-	    	"advlist autolink lists link image charmap print preview anchor",
-	    	"searchreplace visualblocks code fullscreen",
-	    	"insertdatetime media table contextmenu paste jbimages responsivefilemanager"
-	  	],
+    function createCkEditor(element) {
+        ClassicEditor
+            .create( element, {
+                simpleUpload: {
+                    // The URL that the images are uploaded to.
+                    uploadUrl: '/admin/upload/images',
 
-	  	// ===========================================
-	  	// PUT PLUGIN'S BUTTON on the toolbar
-	  	// ===========================================
+                    // Enable the XMLHttpRequest.withCredentials property.
+                    withCredentials: true,
 
-	  	toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-	  	toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
-	  	// ===========================================
-	  	// SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-	  	// ===========================================
-
-	  	style_formats: [
-			{title: 'Bold text', inline: 'b'},
-			{title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
-			{title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
-			{title: 'Example 1', inline: 'span', classes: 'example1'},
-			{title: 'Example 2', inline: 'span', classes: 'example2'},
-			{title: 'Table styles'},
-			{title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
-	   ],
-
-	  	relative_urls: false,
-
-	  	image_advtab: true ,
-
-	   external_filemanager_path:"/filemanager/",
-	   filemanager_title:"Responsive Filemanager" ,
-	   external_plugins: { "filemanager" : "/assets/js/tinymce4x/plugins/responsivefilemanager/plugin.min.js"}
-	});
+                    // Headers sent along with the XMLHttpRequest to the upload server.
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                },
+            })
+            .catch( error => {
+                console.error( error );
+            } );
+    }
 
 	//replace tieng viet
 	 function friendlyLink(s){

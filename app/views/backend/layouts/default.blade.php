@@ -9,6 +9,7 @@
 			Administration
 			@show
 		</title>
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
 		<meta name="keywords" content="Administrator page" />
 		<meta name="author" content="Flypaper" />
 		<meta name="description" content="Administrator page" />
