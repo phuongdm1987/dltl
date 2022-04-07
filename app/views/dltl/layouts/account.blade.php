@@ -47,7 +47,7 @@
 <script type="text/javascript" src="/assets/js/bootstrap-datepicker/locales/bootstrap-datepicker.vi.min.js"></script>
 <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('assets/js/spin.min.js') }}"></script>
-<script src="{{ asset('assets/js/tinymce4x/tinymce.min.js') }}"></script>
+<script src="{{ asset('assets/js/ckeditor/ckeditor.js') }}"></script>
 <script src="{{ asset('assets/js/common.js') }}"></script>
 <script src="/assets/frontend/js/frontend.js"></script>
 <script src="{{ asset('assets/js/functions.js') }}"></script>
