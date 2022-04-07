@@ -43,7 +43,7 @@ class Tour extends Entity {
 	}
 
 	public function getImage($prefix = '') {
-		if ($this->tou_image == '' || !file_exists(PATH_UPLOAD_IMAGE_TOUR . $prefix . $this->tou_image)) return 'http://placehold.it/200x150';
+		if ($this->tou_image == '' || !file_exists(PATH_UPLOAD_IMAGE_TOUR . $prefix . $this->tou_image)) return '/assets/img/200x150.png';
 		return PATH_IMAGE_TOUR . $prefix . $this->tou_image;
 	}
 

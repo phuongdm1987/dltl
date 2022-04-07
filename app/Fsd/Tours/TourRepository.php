@@ -23,4 +23,5 @@ interface TourRepository {
 	public function getTourContent(Tour $tour);
 	public function getTourByPlace($placeId, $count = 10);
 	public function getTourByUser(User $user, $count = 10, array $param = array());
+    public function getHotTours($count = 5);
 }

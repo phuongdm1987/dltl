@@ -32,6 +32,8 @@ Route::get('/', ['as' => 'home', 'uses' => 'HomeController@getIndex']);
 Route::get('/tour', ['as' => 'home-active', 'uses' => 'HomeController@getTour']);
 Route::post('/admin/upload/images', ['as' => 'upload.images', 'uses' => 'ImageController@upload']);
 
+Route::get('/sitemap.xml', ['uses' => 'SitemapController@index']);
+
 // Pages
 //
 Route::group([ 'prefix' => 'page'], function() {
@@ -123,13 +125,11 @@ Route::group(['prefix' => 'api', 'namespace' => 'Controllers\Api'], function() {
     Route::get('/update-image', ['as' => 'update-image', 'uses' => 'UpdateResizeImageController@updateResizeImage']);
 });
 
-
-Route::get('/test', 'TestController@index');
+// old code
 Route::get('/list', 'HomeController@getList');
-
-Route::get('/me/tours', 'HomeController@getTours');
-
+Route::get('/me/tours', 'HomeController@getTour');
 Route::get('/p{placeId}/tour-du-lich-{placeSlug}', ['as' => 'place.list', 'uses' => 'PlaceController@getIndex']);
+
 
 Route::get('/tim-kiem', ['as' => 'search', 'uses' => 'SearchController@getIndex']);
 

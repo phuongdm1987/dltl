@@ -116,6 +116,7 @@
     opacity: 70%;
     border-radius: 30px;
     padding: 20px;
+    font-size: large;
 }
 
 #slider-image .content .discount {
