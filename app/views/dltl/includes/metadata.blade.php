@@ -21,4 +21,5 @@
 <meta name="twitter:title" content="{{ $setting->getTitle() }}">
 <meta name="twitter:description" content="{{ $setting->getDescription() }}">
 <meta name="twitter:creator" content="{{ $setting->getTwitter()}} ">
-<meta name="google-site-verification" content="l3ZGqq02KLkUgHxGTESahxpvppqgGdrjgCgShsy4apc" />
+{{--<meta name="google-site-verification" content="l3ZGqq02KLkUgHxGTESahxpvppqgGdrjgCgShsy4apc" />--}}
+<meta name="google-site-verification" content="LtYzs6cnsJIdnttMFNUU68PajqMQdqhr8DgwFII9uIs" />
