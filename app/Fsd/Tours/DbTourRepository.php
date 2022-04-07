@@ -235,6 +235,19 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 							->first();
 	 }
 
+    public function getContentTourByIds($tourIds) {
+        $contents = $this->db->table('tour_contents')
+            ->whereIn('tco_tour_id', $tourIds)
+            ->get();
+
+        $result = [];
+        foreach ($contents as $content) {
+            $result[$content->tco_tour_id] = $content;
+        }
+
+        return $result;
+    }
+
 	 public function getTourByWeek(Tour $tour) {
 		return $this->db->table('tours_by_week')
 							->where('tbw_tou_id', $tour->tou_id)
@@ -472,6 +485,14 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 			7 => 'Chủ Nhật'
 		];
 	}
+
+    public function getHotTours($count = 5) {
+        return $this->model
+            ->where('tou_hot', 1)
+            ->where('tou_confirm', 1)
+            ->orderBy('tou_created_time', 'DESC')
+            ->take($count)->get();
+    }
 
 	public function getTourHotNew(Tour $tour, $count = 20) {
 		return $this->model->where('tou_type', $tour->tou_type)
