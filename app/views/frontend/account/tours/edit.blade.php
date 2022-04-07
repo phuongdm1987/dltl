@@ -136,7 +136,7 @@
 					<div class="form-group {{ $errors->has('tou_type') ? 'has-error' : '' }}">
 						<label for="tou_type" class="col-sm-3 control-label">Phân loại khu vực <b class="text-danger">*</b></label>
 						<div class="col-sm-6">
-							{{ Form::select('tou_type', array_merge([0 => 'Chọn loại'], $tourTypes), $tour->tou_type, ['class' => 'form-control']) }}
+							{{ Form::select('tou_type', array_replace([0 => 'Chọn loại'], $tourTypes), $tour->tou_type, ['class' => 'form-control']) }}
 							{{ $errors->first('tou_type', '<span class="help-inline text-danger">:message</span>') }}
 						</div>
 					</div>

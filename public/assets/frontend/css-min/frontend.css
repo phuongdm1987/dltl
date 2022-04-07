@@ -98,3 +98,35 @@
 #footer .certificates {
     background-color: #fff;
 }
+
+#slider-image .carousel-inner {
+    height: 380px;
+}
+
+#slider-image .carousel-caption {
+    top: 50px;
+    bottom: unset;
+    padding: 0;
+}
+
+#slider-image .carousel-caption .content {
+    margin-top: 30px;
+    text-align: left;
+    background-color: #0000005c;
+    opacity: 70%;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+#slider-image .content .discount {
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+#slider-image h3 {
+    margin: 0;
+}
+
+.tour-content img {
+    max-width: 100%;
+}

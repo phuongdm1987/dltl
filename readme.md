@@ -41,3 +41,8 @@ find . -type f -exec dos2unix {} \;
 - update code need docker compose down/up to load new update
 - set PHP_OPCACHE_VALIDATE_TIMESTAMPS='1' because use docker and need to load new code change
 - add hosts for domain
+
+## JS
+### CkEditor
+- build custom at https://ckeditor.com/ckeditor-5/online-builder/
+- change files at public/assets/js/ckeditor
