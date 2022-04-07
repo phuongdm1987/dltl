@@ -299,7 +299,6 @@ Quản lý modules ::
 @stop
 
 @section('scripts')
-	<script src="{{ asset('assets/js/common.js') }}"></script>
 	<script src="{{ asset("assets/js/jquery.tagsinput.js") }}"></script>
 	<script type="text/javascript">
 		$(function() {
