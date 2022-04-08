@@ -56,7 +56,13 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 	}
 
 	 public function getPublishToursPaginated($count = 10) {
-		return $this->model->where('tou_status', Tour::STATUS_ACTIVE)->paginate($count);
+		$query =  $this->model->where('tou_status', Tour::STATUS_ACTIVE);
+
+        if ($count > 0 ) {
+            return $query->paginate($count);
+        }
+
+        return $query->get();
 	 }
 
 	 public function getPublishToursByTypePaginated($type, $count = 10) {

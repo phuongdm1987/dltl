@@ -7,11 +7,12 @@
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
     </url>
-    @foreach($categories as $category)
+    @foreach($tours as $tour)
         <url>
-            <loc>{{ $category->getUrlBlog() }}</loc>
+            <loc>{{ $tour->getUrl() }}</loc>
             <lastmod>{{ date('Y-m-dT00:00:00+07:00') }}</lastmod>
-            <changefreq>weekly</changefreq>
+            <changefreq>daily</changefreq>
+            <priority>0.8</priority>
         </url>
     @endforeach
     @foreach(\Fsd\Tours\Tour::TYPE as $typeId => $type)
@@ -31,6 +32,14 @@
     @foreach($places as $place)
         <url>
             <loc>{{ $place->getUrl() }}</loc>
+            <lastmod>{{ date('Y-m-dT00:00:00+07:00') }}</lastmod>
+            <changefreq>weekly</changefreq>
+        </url>
+    @endforeach
+
+    @foreach($categories as $category)
+        <url>
+            <loc>{{ $category->getUrlBlog() }}</loc>
             <lastmod>{{ date('Y-m-dT00:00:00+07:00') }}</lastmod>
             <changefreq>weekly</changefreq>
         </url>
