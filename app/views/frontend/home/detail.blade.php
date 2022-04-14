@@ -46,7 +46,7 @@
                                                         @for($max = $key; $max >= ($key - 2); $max--)
                                                         <div class="col-sm-4 item-inside">
                                                             @if($max < 1)
-                                                                <img src="http://placehold.it/280x150" alt="">
+                                                                <img src="/assets/img/200x150.png" alt="">
                                                             @else
                                                                 <img src="{{ PATH_IMAGE_TOUR . 'md_' . $photos[$max-1]->tim_tour_image }}" alt="{{ $tour->tou_name }}">
                                                             @endif

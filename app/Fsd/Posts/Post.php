@@ -30,7 +30,7 @@ class Post extends Entity implements PresenterInterface {
 	}
 
 	public function getPicture($prefix = 'sm_') {
-		if ($this->pos_image == '' || !file_exists(PATH_UPLOAD_IMAGE_POST . $prefix . $this->pos_image)) return 'https://placehold.it/50x50';
+		if ($this->pos_image == '' || !file_exists(PATH_UPLOAD_IMAGE_POST . $prefix . $this->pos_image)) return '/assets/img/50x50.png';
 		return PATH_IMAGE_POST . $prefix . $this->pos_image;
 	}
 

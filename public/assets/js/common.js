@@ -21,7 +21,7 @@ $(function() {
 	// $('img').on('error', function() {
 	// 	console.log("IMG ERROR!!");
 	// 	var imgSize = $(this).data('size');
-	// 	this.src = "http://placehold.it/" + imgSize;
+	// 	this.src = "/assets/img/" + imgSize + ".png";
 	// });
 
 

@@ -25,7 +25,7 @@ class City extends Entity {
    }
 
    public function getImage($type = '') {
-      $img = file_exists(PATH_UPLOAD_IMAGE_CITY . $type . $this->cit_image) ? PATH_IMAGE_CITY . $type . $this->cit_image : 'http://placehold.it/225x150';
+      $img = file_exists(PATH_UPLOAD_IMAGE_CITY . $type . $this->cit_image) ? PATH_IMAGE_CITY . $type . $this->cit_image : '/assets/img/50x50.png';
       // $img = $this->cit_image != null ?  PATH_IMAGE_CITY . $type . $this->cit_image :  '/assets/img/grey.gif';
       return $img;
    }

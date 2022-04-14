@@ -17,7 +17,7 @@ class Testimonial extends Entity implements PresenterInterface {
 	public function getPicture($type = 'sm_') {
 		return $this->tes_image != null ?
 				PATH_IMAGE_TESTIMONTIAL . $type . $this->tes_image
-				: 'http://placehold.it/50x50';
+				: '/assets/img/50x50.png';
 	}
 
 	public function getPresenter() {
