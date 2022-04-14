@@ -100,7 +100,7 @@
 }
 
 #slider-image .carousel-inner {
-    height: 380px;
+    max-height: 380px;
 }
 
 #slider-image .carousel-caption {
