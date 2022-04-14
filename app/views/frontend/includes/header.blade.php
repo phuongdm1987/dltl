@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>{{ $setting->getTitle() }}</title>
-		<meta name="description" content="{{ $setting->getDescription() }}"/>
+		<meta name="description" content="{{{ $setting->getDescription() }}}"/>
 		<meta name="author" content="Owner"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="canonical" href="{{ URL::current() }}" />
@@ -12,7 +12,7 @@
 		<meta property="og:locale" content="vi_VN" />
 		<meta property="og:type" content="article" />
 		<meta property="og:title" content="{{ $setting->getTitle() }}" />
-		<meta property="og:description" content="{{ $setting->getDescription() }}" />
+		<meta property="og:description" content="{{{ $setting->getDescription() }}}" />
 		<meta property="og:site_name" content="description" />
 		<meta property="og:url" content="{{ URL::current() }}" />
 		<meta name="google-site-verification" content="l3ZGqq02KLkUgHxGTESahxpvppqgGdrjgCgShsy4apc" />

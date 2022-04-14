@@ -3,7 +3,7 @@
    <head>
       <title>{{ $setting->getTitle() . ' :: ' . $setting->getOwner() }} </title>
       <meta name="keywords" content="{{ $setting->getKeywords() }}"/>
-      <meta name="description" content="{{ $setting->getDescription() }}"/>
+      <meta name="description" content="{{{ $setting->getDescription() }}}"/>
       <meta name="author" content="{{ $setting->getOwner() }}"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="csrf-token" content="{{ csrf_token() }}" />

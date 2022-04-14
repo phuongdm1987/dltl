@@ -6,11 +6,11 @@
       <meta charset="utf-8" />
       <title>{{ $setting->getTitle() . ' :: ' . $setting->getOwner() }}</title>
       <meta name="keywords" content="{{ $setting->getKeywords() }}"/>
-      <meta name="description" content="{{ $setting->getDescription() }}"/>
+      <meta name="description" content="{{{ $setting->getDescription() }}}"/>
       <meta name="author" content="{{ $setting->getOwner() }}"/>
       <meta property="og:title" content="{{ $setting->getTitle() . ' :: ' . $setting->getOwner() }}">
       <meta property="og:keywords" content="{{ $setting->getKeywords() }}">
-      <meta property="og:description" content="{{ $setting->getDescription() }}">
+      <meta property="og:description" content="{{{ $setting->getDescription() }}}">
       <meta content="noodp,index,follow" name="robots">
       <meta content="{{ url() }}" property="og:url">
       <meta content="{{ url() }}" property="og:site_name">
