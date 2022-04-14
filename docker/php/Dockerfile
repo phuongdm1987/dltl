@@ -33,10 +33,6 @@ RUN docker-php-ext-install -j$(getconf _NPROCESSORS_ONLN) gd
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath opcache
 RUN docker-php-ext-enable mcrypt
 
-ARG PHP_OPCACHE_VALIDATE_TIMESTAMPS="1"
-
-COPY opcache.ini /usr/local/etc/php/conf.d/opcache.ini
-
 ###########################################################################
 # xDebug:
 ###########################################################################
@@ -49,8 +45,11 @@ RUN if [ ${INSTALL_XDEBUG} = true ]; then \
   docker-php-ext-enable xdebug \
 ;fi
 
+ARG PHP_OPCACHE_VALIDATE_TIMESTAMPS
+
 # Copy xdebug configuration for remote debugging
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+# COPY opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
