@@ -496,7 +496,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
         return $this->model
             ->where('tou_hot', 1)
             ->where('tou_confirm', 1)
-            ->orderBy('tou_created_time', 'DESC')
+            ->orderBy('tou_updated_time', 'DESC')
             ->take($count)->get();
     }
 
@@ -504,7 +504,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 		return $this->model->where('tou_type', $tour->tou_type)
             ->where('tou_hot', 1)
             ->where('tou_confirm', 1)
-            ->orderBy('tou_created_time', 'DESC')
+            ->orderBy('tou_updated_time', 'DESC')
             ->take($count)->get();
 	}
 
@@ -514,7 +514,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 			->where('tou_type', Tour::TYPE_INLAND)
 			->where('tou_hot', 1)
 			->where('tou_confirm', 1)
-			->orderBy('tou_created_time', 'DESC')
+			->orderBy('tou_updated_time', 'DESC')
 			->take($count)->get();
 	}
 
@@ -524,7 +524,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 			->where('tou_type', Tour::TYPE_FOREIGN)
 			->where('tou_hot', 1)
 			->where('tou_confirm', 1)
-			->orderBy('tou_created_time', 'DESC')
+			->orderBy('tou_updated_time', 'DESC')
 			->take($count)->get();
 	}
 
@@ -534,7 +534,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 			->where('tou_type', Tour::TYPE_INLAND)
 			->where('tou_hot', 0)
 			->where('tou_confirm', 1)
-			->orderBy('tou_created_time', 'DESC')
+			->orderBy('tou_updated_time', 'DESC')
 			->take($count)->get();
 	}
 
@@ -544,7 +544,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 			->where('tou_type', Tour::TYPE_FOREIGN)
 			->where('tou_hot', 0)
 			->where('tou_confirm', 1)
-			->orderBy('tou_created_time', 'DESC')
+			->orderBy('tou_updated_time', 'DESC')
 			->take($count)->get();
 	}
 
