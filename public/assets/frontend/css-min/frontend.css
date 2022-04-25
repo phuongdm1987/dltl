@@ -131,3 +131,12 @@
 .tour-content img {
     max-width: 100%;
 }
+
+#main-content #tour-detail .box .title {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
