@@ -1,9 +1,9 @@
 <div class="" id="header">
     <div class="top">
         <div class="container clearfix inside">
-            <h1 id="logo" class="pull-left" title="Du lịch thăng long">
+            <span id="logo" class="pull-left" title="Du lịch thăng long">
                 <a href="{{ route('home') }}"><img src="/assets/img/logo.png" alt="Du lịch thăng long" /></a>
-            </h1>
+            </span>
             <div class="pull-right">
                 <div class="sologan pull-left hidden-xs hidden-sm">
                     <p><strong>Lorem ipsum dolor sit amet</strong></p>
