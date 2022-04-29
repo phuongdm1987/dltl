@@ -161,7 +161,7 @@ class TourController extends BaseController {
 
 		if(! $tour = $this->tour->getTourById($tourId)) return \App::abort(404);
 
-		$this->metadata->setTitle($tour->tou_name . " :: " . $this->metadata->getTitle());
+		$this->metadata->setTitle($tour->tou_name);
 		$this->metadata->setDescription($tour->tou_name . ', tìm kiếm tour du lịch cực dễ dàng, tiện lợi, giá thấp nhất Việt Nam');
 
 		$content = $this->tour->getContentTourById($tour);
