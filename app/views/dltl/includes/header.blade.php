@@ -6,8 +6,6 @@
             </span>
             <div class="pull-right">
                 <div class="sologan pull-left hidden-xs hidden-sm">
-                    <p><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>Aenean commodo ligula eget dolor.</p>
                 </div>
                 <div class="pull-right">
                     <div class="hotline">
