@@ -30,17 +30,18 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 	/*
 	* Dữ liệu lấy ra sử dụng trong admin
 	*/
-	public function getToursByPaginated(array $params, $count = 25, $status = Tour::STATUS_CONFIRM) {
+	public function getToursByPaginated(array $params, $count = 25, $confirm = Tour::STATUS_CONFIRM) {
 		$q             = array_get($params, 'q');
 		$cityDeparture = array_get($params, 'cityDeparture');
-		$query         = $this->model->where('tou_confirm', $status)
-												->where('tou_status', Tour::STATUS_ACTIVE)
-												->orderBy('tou_created_time', 'DESC');
+		$query         = $this->model->where('tou_confirm', $confirm)
+			->orderBy('tou_created_time', 'DESC');
 
 		$query->where(function($where) use($q) {
-			$where->where('tou_name', 'LIKE', '%'. $q .'%');
-			$where->orWhere('tou_price', 'LIKE', '%'. $q .'%');
-			$where->orWhere('tou_id', '=', $q);
+			if($q) {
+				$where->where('tou_name', 'LIKE', '%'. $q .'%');
+				$where->orWhere('tou_price', 'LIKE', '%'. $q .'%');
+				$where->orWhere('tou_id', '=', $q);
+			}
 		});
 
 		$query->where(function($q) use($cityDeparture) {
@@ -49,6 +50,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 			}
 		});
 
+		dd($query->toSql());
 		return $query->paginate($count);
 	}
 
