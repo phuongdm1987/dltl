@@ -111,8 +111,8 @@ class PostsController extends AdminController {
 
 		$post->pos_title			= Xss::clean(Input::get('pos_title'));
 		$post->pos_icon			= Xss::clean(Input::get('pos_icon'));
-		$post->pos_teaser		   = Xss::clean(Input::get('pos_teaser'));
-		$post->pos_content		= Xss::clean(Input::get('pos_content'));
+		$post->pos_teaser = Xss::clean(str_replace('<h1>&nbsp;</h1>', '', Input::get('pos_teaser')));
+		$post->pos_content = Xss::clean(str_replace('<h1>&nbsp;</h1>', '', Input::get('pos_content')));
 		$post->pos_category_id  = (int) Input::get('category_id');
 		$post->pos_active			= Post::PUBLISHED;
 		$post->pos_type			= Post::PUBLIC_SITE;
