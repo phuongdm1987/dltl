@@ -50,7 +50,6 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 			}
 		});
 
-		dd($query->toSql());
 		return $query->paginate($count);
 	}
 
