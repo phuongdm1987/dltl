@@ -40,6 +40,7 @@ class DbTourRepository extends EloquentRepository implements TourRepository
 		$query->where(function($where) use($q) {
 			$where->where('tou_name', 'LIKE', '%'. $q .'%');
 			$where->orWhere('tou_price', 'LIKE', '%'. $q .'%');
+			$where->orWhere('tou_id', '=', $q);
 		});
 
 		$query->where(function($q) use($cityDeparture) {

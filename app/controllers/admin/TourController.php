@@ -307,9 +307,9 @@ class TourController extends AdminController {
 
 				// Lưu thông tin vê tour
 				$this->tour->saveContent($tour, [
-					'tco_tour_schedule'	=>	Xss::clean(Input::get('tco_tour_schedule')),
-					'tco_tour_policies'	=>	Xss::clean(Input::get('tco_tour_policies')),
-					'tco_tour_comprise'	=>	Xss::clean(Input::get('tco_tour_comprise'))
+					'tco_tour_schedule'	=> Xss::clean(str_replace('<h1>&nbsp;</h1>', '', Input::get('tco_tour_schedule'))),
+					'tco_tour_policies'	=> Xss::clean(str_replace('<h1>&nbsp;</h1>', '', Input::get('tco_tour_policies'))),
+					'tco_tour_comprise'	=> Xss::clean(str_replace('<h1>&nbsp;</h1>', '', Input::get('tco_tour_comprise'))),
 				]);
 
 				// Lưu thông tin hình ảnh về tour
