@@ -13,4 +13,6 @@ return [
 
     'GOOGLE_CLIENT_ID' => '',
     'GOOGLE_SECRETKEY' => '',
+
+    'REDIS_PASSWORD' => 'secret',
 ];

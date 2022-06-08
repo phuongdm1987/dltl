@@ -51,6 +51,7 @@ services:
     container_name: backend-redis
     volumes:
       - 'redis:/data'
+    command: --requirepass ${REDIS_PASSWORD}
     ports:
       - "6379:6379"
 
